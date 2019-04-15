@@ -1,0 +1,22 @@
+{
+	"apps": [{
+        "name": "yoyow_api",
+        "script": "node ./bin/www",
+        "node_args": "--max_old_space_size=512",
+        "instances": 1,
+        "exec_mode": "fork",
+        "max_memory_restart": "256M",
+        "autorestart": true,
+        "watch": ["middleware"],
+        "watch_options": {
+            "usePolling": true
+        },
+        "env": {
+            "NODE_ENV": "production",
+            "PORT":3003
+        },
+        "error_file": "./logs/pm2-scheduler-err.log",
+        "out_file": "./logs/pm2-scheduler-out.log"
+    }
+	]
+}
