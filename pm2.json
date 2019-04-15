@@ -1,7 +1,7 @@
 {
 	"apps": [{
         "name": "yoyow_api",
-        "script": "node ./bin/www",
+        "script": "node ./middleware/bin/www",
         "node_args": "--max_old_space_size=512",
         "instances": 1,
         "exec_mode": "fork",
