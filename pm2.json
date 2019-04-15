@@ -1,10 +1,11 @@
 {
 	"apps": [{
         "name": "yoyow_api",
-        "script": "node ./middleware/bin/www",
+        "script": "./middleware/bin/www",
         "node_args": "--max_old_space_size=512",
         "instances": 1,
         "exec_mode": "fork",
+        "exec_interpreter": "babel-node",
         "max_memory_restart": "256M",
         "autorestart": true,
         "watch": ["middleware"],
