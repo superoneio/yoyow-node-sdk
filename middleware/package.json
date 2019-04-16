@@ -6,7 +6,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "cross-env PORT=3001 babel-node ./bin/www",
+    "start": "cross-env PORT=3003 babel-node ./bin/www",
     "debug": "cross-env PORT=3001 nodemon ./bin/www --exec babel-node",
     "doc": "esdoc -c esdoc.json",
     "test": "cross-env mocha -t 10000 --require babel-core/register",
@@ -14,6 +14,8 @@
     "test:auth": "cross-env mocha -t 10000 --require babel-core/register ./test/auth.test"
   },
   "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
     "crypto-js": "^3.1.9-1",
